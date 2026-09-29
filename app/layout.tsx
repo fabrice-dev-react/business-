@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Sora } from "next/font/google";
 import "./globals.css";
-import { businessName } from "@/lib/site";
+import { businessFullName } from "@/lib/site";
 
 const sora = Sora({
   variable: "--font-display",
@@ -14,9 +14,16 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: `${businessName} — Affordable Car Hire in Kigali, Rwanda`,
+  title: `${businessFullName} — New & Used Cars in Kigali, Rwanda`,
   description:
-    "Rent reliable cars in Kigali at affordable daily rates. Toyota, Honda, Hyundai and more. Airport pickup, insurance included. Book with GENI CAR RENTAL KIGALI today.",
+    "Buy new and pre-owned cars in Kigali at honest prices. Every vehicle inspected, documented and ready for a test drive. Trade-in, financing and delivery across Rwanda.",
+  openGraph: {
+    title: `${businessFullName} — New & Used Cars in Kigali, Rwanda`,
+    description:
+      "Inspected, documented cars with honest pricing. Trade-in, financing and nationwide delivery.",
+    type: "website",
+    locale: "en_RW",
+  },
 };
 
 export default function RootLayout({
